@@ -20,7 +20,7 @@ defprotocol Orderable do
   Tuples can be used to return an ordering whose second element only is considered if the first element is the same (and the third is only used if the second elements are the same, etc.)
   So if you have a struct `%Address{city: String.t, street: String.t, house_number: integer}` that you'd like to sort, you could implement it as follows:
 
-      defimpl Orderable, for: %Address do
+      defimpl Orderable, for: Address do
         def ordered(address) do
           Orderable.ordered({address.city, address.street, address.house_number})
         end

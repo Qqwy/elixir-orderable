@@ -1,18 +1,30 @@
 defmodule Orderable.MixProject do
   use Mix.Project
 
+
+  @version "0.2.1"
+  @repo_url "https://github.com/Qqwy/elixir-orderable"
+
+
   def project do
     [
       app: :orderable,
-      version: "0.2.0",
+      version: @version,
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       elixirc_paths: elixirc_paths(Mix.env()),
       package: package(),
       description: description(),
-      source_url: "https://github.com/Qqwy/elixir-orderable",
-      consolidate_protocols: Mix.env != :dev
+      source_url: @repo_url,
+
+      # Docs
+      name: "Orderable",
+      docs: [
+        source_ref: "v#{@version}",
+        main: "Orderable",
+        source_url: @repo_url
+      ],
     ]
   end
 
@@ -39,10 +51,11 @@ defmodule Orderable.MixProject do
   defp package() do
     [
       # These are the default files included in the package
+      maintainers: ["Wiebe-Marten Wijnja/Qqwy"],
       files: ~w(lib .formatter.exs mix.exs README* ),
       licenses: ["Apache 2.0"],
       links: %{
-        "GitHub" => "https://github.com/Qqwy/elixir-orderable"
+        "GitHub" => @repo_url
       }
     ]
   end
