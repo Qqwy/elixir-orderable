@@ -101,6 +101,10 @@ defprotocol Orderable do
 
   """
 
+  @doc """
+  For every implementing type, it is supposed to return a data structure that can be used
+  by Erlang's built-in ordering mechanism.
+  """
   @spec ordered(Orderable.t) :: any()
   def ordered(thing)
 end
