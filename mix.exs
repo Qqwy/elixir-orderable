@@ -23,7 +23,8 @@ defmodule Orderable.MixProject do
   defp deps do
     [
 
-      {:stream_data, "~> 0.1", only: :test}
+      {:stream_data, "~> 0.1", only: :test},
+      {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
     ]
   end
 
