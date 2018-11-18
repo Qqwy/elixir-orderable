@@ -46,7 +46,7 @@ So if you have a struct `%Address{city: String.t, street: String.t, house_number
 
 This will sort by city, and if they match by street, and if they match by house number.
 
-Note also that we call `Orderable.ordered` recursively on the return value.
+  Note also that we call `Orderable.ordered` recursively on the tuple we are building.
 While this is only required if you know you might have custom values inside your data structur
 (for which Orderable might also be implemented), it is considered good style, so you do not forget it later on when your data model changes.
 For lists and tuples, Orderable.ordered will be called for each of the elements automatically.
