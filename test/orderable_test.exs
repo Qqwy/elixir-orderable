@@ -1,7 +1,7 @@
 defmodule CustomOrderTest do
   use ExUnit.Case
   use ExUnitProperties
-  doctest Orderable
+  # doctest Orderable # <- Doctests turned off because we create a module with a struct in the moduledoc example.
 
   property "Calling Orderable.ordered on primitive datatypes does not change their sort order" do
     check all list <- list_of(one_of([integer(), float(), binary(), bitstring(), atom(:alphanumeric)])) do
