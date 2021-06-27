@@ -40,7 +40,7 @@ defmodule Orderable.MixProject do
     [
 
       {:stream_data, "~> 0.1", only: :test},
-      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.5.6", only: [:dev, :test], runtime: false},
       {:ex_doc, ">= 0.0.0", only: :dev},
     ]
   end
